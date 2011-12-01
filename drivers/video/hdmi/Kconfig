@@ -1,0 +1,19 @@
+#
+# Display drivers configuration
+#
+menu "HDMI"
+config HDMI
+	bool "HDMI support"
+
+if HDMI
+source "drivers/video/hdmi/chips/Kconfig"
+
+#config HDMI_DUAL_DISP
+#	bool "hdmi support dual display"
+#	help
+#	nothing
+#config HDMI_DEBUG
+#	bool "hdmi debug"
+endif
+
+endmenu
